@@ -1,17 +1,22 @@
-"use strict";
 
-
-
-
-
-
-function imprimir() {
-
-
-    x = 7;
-    console.log(x);
-
-
-
+function speakGeneric(){
+    console.log(this.sound);
 }
-imprimir();
+
+
+
+let dog = {
+    sound: "Au Au",
+    speak: speakGeneric
+    
+}
+
+
+let cat = {
+    sound: "Miau",
+    speak: speakGeneric
+    
+}
+
+dog.speak();
+cat.speak();
